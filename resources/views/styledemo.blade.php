@@ -4,9 +4,6 @@
         <div class="clearfix pb-5 pt-8 "> 
             <h1 class="text-2xl font-bold text-white w-1/4 float-left">
                 The Modernist 
-                    <!-- <span class="text-xs mt-0">
-                        Free PSD Website Tem
-                    </span> -->
                 </h1>
              <nav class="float-right text-white  w-3/4 ">
                 <ul class="clearfix pt-2">
