@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
