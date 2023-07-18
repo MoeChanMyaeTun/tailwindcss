@@ -1,6 +1,6 @@
 @extends('app')
 @section('content')
-    <div class="sec-mv lg:container px-28 bg-stone-400 pb-5 mx-auto">
+    <div class="sec-mv lg:containers px-28 bg-stone-400 pb-5 mx-auto">
         <div class="clearfix pb-5 pt-8 "> 
             <h1 class="text-2xl font-bold text-white w-1/4 float-left">
                 The Modernist 
