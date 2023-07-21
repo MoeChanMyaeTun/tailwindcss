@@ -1,18 +1,11 @@
 <!doctype html>
-<html class="dark">
+<html>
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   @vite('resources/css/app.css')
-  <script>
-    if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-        document.documentElement.classList.add('dark');
-    } else {
-        document.documentElement.classList.remove('dark')
-    }
-</script>
 </head>
-<body class="dark:bg-slate-800 dark:text-white">
+<body class="">
         <div class="pb-[156px] pt-8 bg-background4 bg-cover"> 
             <nav class="relative w-4/4 ">
                     <!-- <img src="{{ asset('img/logo.png') }}" alt="" class="w-60 float-left absolute top-min left-[170px]"> -->
