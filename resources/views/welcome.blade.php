@@ -4,22 +4,29 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   @vite('resources/css/app.css')
+  <script>
+    if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+    } else {
+        document.documentElement.classList.remove('dark')
+    }
+</script>
 </head>
-<body>
-        <div class="pb-[176px] pt-8 bg-background bg-cover"> 
+<body class="dark:bg-slate-800 dark:text-white">
+        <div class="pb-[156px] pt-8 bg-background4 bg-cover"> 
             <nav class="relative w-4/4 ">
-                    <img src="{{ asset('img/logo.png') }}" alt="" class="w-60 float-left absolute top-min left-[170px]">
-                    <ul class="clearfix py-1 bg-white pl-[752px]">
-                        <li class="float-left ml-4 px-2"><a href="#"> HOME</a></li>
-                        <li class="float-left ml-4 px-2"><a href="{{ url('styledemo') }}">STYLEDEMO</a></li>
-                        <li class="float-left ml-4 px-2"><a href="#">FULLWIDTH</a></li>
-                        <li class="float-left ml-4 px-2"><a href="#">DROPDOWN</a></li>
-                        <li class="float-left ml-4 px-2"><a href="#">PORTFOLIO</a></li>
-                        <li class="float-left ml-4 px-2"><a href="#">GALLERY</a></li>
+                    <!-- <img src="{{ asset('img/logo.png') }}" alt="" class="w-60 float-left absolute top-min left-[170px]"> -->
+                    <ul class="clearfix py-8 pl-[752px] dark:text-black">
+                        <li class="float-left ml-4 px-2"><a href="{{ url('/')}}" class="visited:text-purple-500 visited:underline hover:underline hover:bg-slate-50"> HOME</a></li>
+                        <li class="float-left ml-4 px-2"><a href="{{ url('styledemo') }}" class="hover:underline hover:bg-slate-50">STYLEDEMO</a></li>
+                        <li class="float-left ml-4 px-2"><a href="#" class="hover:underline hover:bg-slate-50">FULLWIDTH</a></li>
+                        <li class="float-left ml-4 px-2"><a href="#" class="hover:underline hover:bg-slate-50">DROPDOWN</a></li>
+                        <li class="float-left ml-4 px-2"><a href="#" class="hover:underline hover:bg-slate-50">PORTFOLIO</a></li>
+                        <li class="float-left ml-4 px-2"><a href="#" class="hover:underline hover:bg-slate-50">GALLERY</a></li>
                     </ul>
                 </nav>
                 <div class="container pb-5 mx-auto clearfix">
-                <div class="mt-40 ml-20 border border-solid border-slate-300 w-2/4 px-10 py-4">
+                <div class="mt-40 ml-20 border border-solid border-slate-300 w-2/4 px-10 py-4 dark:text-black">
                         <p class="text-2xl tracking-wide">
                         Tasteiest And <br>
                         Mouth Watering <br>
@@ -36,11 +43,11 @@
             <div class="float-left">
                 <img src="{{ asset('img/about.png') }}" alt="" class="w-[749px]" >
             </div>
-            <div class="float-right dark:bg-slate-800 bg-white">
-                         <p class="text-2xl tracking-wide dark:text-white dark:text-slate-400">
+            <div class="float-right">
+                         <p class="text-2xl tracking-wide ">
                          BonAppetit Serves <br> Contemporary <br> European Cuisine.
                         </p>
-                        <p class="mt-10 dark:text-white dark:text-slate-400">
+                        <p class="mt-10 ">
                         Lorem ipsum dolor sit amet, consectetur adipi scing elit,<br>
                          sed do eiusmod tempor incididunt ut labore et dolore <br>
                           morbi Lorem ipsum dolor sit amet adipiscing. <br> <br>
@@ -203,7 +210,7 @@
             </div>
         </div>
         <!-- 5th-blk -->
-        <div class="bg-slate-800 py-5">
+        <div class="bg-slate-400 py-5">
                 <div class="container mx-auto">
                     <p class="text-2xl tracking-wide text-center pt-20 text-white">
                     <span class="text-red-700">BON</span> APPETIT

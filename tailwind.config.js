@@ -11,7 +11,8 @@ module.exports = {
       backgroundImage: {
         'background': 'url("/public/img/Background.png")',
         'background2' : 'url("/public/img/background2.png")',
-        'background3' : 'url("/public/img/dots-01.png")'
+        'background3' : 'url("/public/img/dots-01.png")',
+        'background4' : 'url("/public/img/mvbg.png")',
       },
       inset: {
         'min': '-33px',
@@ -21,7 +22,7 @@ module.exports = {
         '0.6em' : '0.6em'
       },
       padding:{
-        '176px' : '176px',
+        '156px' : '156px',
         '752px' : '752px',
         '85px'  : '85px'
       },
@@ -41,9 +42,9 @@ module.exports = {
     },
     container: {
       screens: {
-        mobile: "600px",
-        tablet: "900px",
-        desktop: "1280px",
+        md: "640px",
+        l: "768px",
+        xl: "1280px",
       },
     },
   },
